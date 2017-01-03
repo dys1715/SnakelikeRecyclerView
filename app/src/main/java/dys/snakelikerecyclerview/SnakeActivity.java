@@ -134,7 +134,8 @@ public class SnakeActivity extends Activity {
                 holder.setText("");
                 holder.tv.setBackgroundColor(Color.TRANSPARENT);  //TRANSPARENT
             } else {
-                holder.tv.setBackgroundColor(mContext.getResources().getColor(R.color.colorAccent));
+                holder.tv.setTextColor(Color.WHITE);
+                holder.tv.setBackgroundColor(mContext.getResources().getColor(R.color.colorPrimary));
                 holder.setText(mItems.get(position));
                 holder.tv.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -178,7 +179,7 @@ public class SnakeActivity extends Activity {
             mSpace = context.getResources().getDimensionPixelOffset(R.dimen.space_margin);
             int connectorWidth = context.getResources().getDimensionPixelOffset(R.dimen.connector_width);
             mLinePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-            mLinePaint.setColor(context.getResources().getColor(R.color.colorPrimary));
+            mLinePaint.setColor(context.getResources().getColor(R.color.colorAccent));
             //设置连接线宽度
             mLinePaint.setStrokeWidth(connectorWidth);
         }
